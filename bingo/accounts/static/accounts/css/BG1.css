@@ -1,0 +1,21 @@
+#heading{
+    background-color: blue;
+}
+#heading h1{
+    font-size: 100px;
+    font-weight: bold;
+    text-align: center;
+    margin: 0;
+}
+#form{
+    margin-left: 450px;
+    margin-right: 450px;
+}
+#form form{
+    border: 5px solid black;
+    padding-left: 15px;
+}
+h3{
+    font-size: 35px;
+    text-align: center;
+}

@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+    {% load static %}
+    <head>
+        <link href="{% static 'accounts/css/BG1.css' %}" rel="stylesheet" type="text/css">
+        <title>Bingo Sign In</title>
+    </head>
+    <body>
+        <div id="heading">
+            <h1>WELCOME TO BINGO</h1>
+        </div><h3>Sign In </h3></br>
+        <div id="form" method="post">
+            <form action="{% url 'accounts:login' %}" method="post">
+
+                {% csrf_token %}
+                </br></br>
+                {{form.non_field_errors}}
+                {{form.username.label_tag}}
+                {{form.username.errors}}
+                {{form.username}}
+                </br></br>
+                {{form.password.label_tag}}
+                {{form.password.errorr}}
+                {{form.password}}
+                </br></br>
+                <button type="submit">Submit</button>
+                </br></br>
+<!--                <label for="">User Name</label>
+                <input type="textbox"></br></br></br>
+
+                
+                <label for="">Password</label>
+                <input type="password" name="sign_in_password"></br></br></br>
+                <button type="submit">Submit</button>
+                </br></br>
+-->
+            </form>
+
+<hr>
+
+            <a href="{% url 'accounts:register' %}" >Click here to create a new account!</a>
+            
+            
+        </div>
+
+    </body>
+</html>
